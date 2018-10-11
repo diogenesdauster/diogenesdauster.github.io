@@ -7,6 +7,6 @@ order: 3
 
 #2018
 
-- 19 Jul 2018 — [Gemini: A Modern LaTeX Poster Theme]()
+- 10 de Outubro 2018 — [What is Lorem Ipsum?]()
 
-- 03 Apr 2018 — [Turning a MacBook into a Touchscreen with $1 of Hardware]()
+- 10 de Outubro 2018 — [Where does it come from?]()

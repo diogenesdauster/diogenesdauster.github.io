@@ -5,11 +5,9 @@ import Page from '../components/page/page'
 const Projects = () => (
   <Layout>
     <Page title={'Projects'}>
-      <div className="project-box" id="git-remote-dropbox">
+      <div className="project-box">
         <h1>
-          <a href="https://github.com/anishathalye/git-remote-dropbox">
-            git-remote-dropbox
-          </a>
+          <a href="/">Where does it come from?</a>
         </h1>
 
         <iframe
@@ -21,7 +19,7 @@ const Projects = () => (
           height="20px"
         />
 
-        <a href="https://github.com/anishathalye/git-remote-dropbox">
+        <a href="/">
           <img
             src="/images/git-remote-dropbox.png"
             alt=""
@@ -30,29 +28,33 @@ const Projects = () => (
         </a>
 
         <p>
-          git-remote-dropbox is a transparent bidirectional bridge between Git
-          and Dropbox. It lets you use a Dropbox folder or a shared folder as a
-          true Git remote!
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a more-or-less normal distribution of
+          letters, as opposed to using 'Content here, content here', making it
+          look like readable English. Many desktop publishing packages and web
+          page editors now use Lorem Ipsum as their default model text, and a
+          search for 'lorem ipsum' will uncover many web sites still in their
+          infancy. Various versions have evolved over the years, sometimes by
+          accident, sometimes on purpose (injected humour and the like).
         </p>
 
         <h2>Blog Posts</h2>
         <ul>
           <li>
-            <a href="/2016/04/25/dropbox-as-a-true-git-server/">
-              Dropbox as a True Git Server
-            </a>
+            <a href="/">What is Lorem Ipsum?</a>
             <span className="inline-post-date">(Apr 2016)</span>
           </li>
           <li>
-            <a href="/2015/08/19/git-remote-dropbox/">git-remote-dropbox</a>
+            <a href="/">Where can I get some?</a>
             <span className="inline-post-date">(Aug 2015)</span>
           </li>
         </ul>
         <h2>Discussions</h2>
         <ul>
           <li>
-            <a href="https://news.ycombinator.com/item?id=11564712">
-              <strong>Hacker News</strong>: Dropbox as a Git Server
+            <a href="/">
+              <strong>Lorem Ipsum</strong>: Why do we use it?
             </a>
           </li>
         </ul>
