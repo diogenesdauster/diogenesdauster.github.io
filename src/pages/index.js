@@ -1,15 +1,31 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/layout/layout'
+import Post from '../components/post/post'
 
 const IndexPage = props => {
-  console.log(props)
+  const url = '/'
+  const title = 'To Do Cake'
+  const date = 'Janeiro de 2018'
+  const related_posts = [
+    {
+      url: '/',
+      title: 'teste',
+      date: 'Janeiro de 2018',
+    },
+    {
+      url: '/',
+      title: 'teste',
+      date: 'Janeiro de 2018',
+    },
+  ]
   return (
     <Layout>
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      <Link to="/page-2/">Go to page 2</Link>
+      <div className="posts">
+        <Post title={title} date={date} related_posts={related_posts}>
+          <p>jsdkjaldjlaksjdlkasjdlajsdlkas</p>
+        </Post>
+      </div>
     </Layout>
   )
 }

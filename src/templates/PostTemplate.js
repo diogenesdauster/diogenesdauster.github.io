@@ -1,15 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
-import Page from '../components/page/page'
+import Post from '../components/post/post'
 
 const PageTemplate = ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
-      <Page title={post.frontmatter.title}>
+      <Post title={post.frontmatter.title}>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </Page>
+      </Post>
     </Layout>
   )
 }

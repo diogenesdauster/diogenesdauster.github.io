@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout/layout'
 
-const Pag404 = () => {
+const NotFoundPage = () => {
   return (
     <Layout>
       <div style={{ textAlign: 'center' }}>
@@ -12,4 +12,4 @@ const Pag404 = () => {
   )
 }
 
-export default Pag404
+export default NotFoundPage

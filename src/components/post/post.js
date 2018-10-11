@@ -18,7 +18,7 @@ const Post = ({ title, url, date, related_posts, children }) => {
             <li id={index}>
               <h3>
                 <Link to={post.url}>
-                  {post.title}
+                  {post.title} {'  '}
                   <small>{post.date}</small>
                 </Link>
               </h3>
