@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import Layout from '../components/layout/layout'
 import Post from '../components/post/post'
 
@@ -22,7 +21,7 @@ const IndexPage = props => {
   return (
     <Layout>
       <div className="posts">
-        <Post title={title} date={date} related_posts={related_posts}>
+        <Post url={url} title={title} date={date} related_posts={related_posts}>
           <p>jsdkjaldjlaksjdlkasjdlajsdlkas</p>
         </Post>
       </div>
