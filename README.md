@@ -1,4 +1,4 @@
-# Diógenes DausterPersonal Page Made in Gatsby
+# Diógenes Dauster Personal Page Made in Gatsby
 
 Hi, My name is Diógenes Dauster and I am very interested in React, because of this I made my personal page in Gatsby. I hope this page is useful for you that you learn about React or Gatsby.
 
