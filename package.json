@@ -27,7 +27,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write '**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"warning: no test specified yeat\" && exit 0"
   },
   "devDependencies": {
     "eslint-config-prettier": "^3.1.0",
