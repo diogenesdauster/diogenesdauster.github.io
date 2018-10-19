@@ -1,8 +1,6 @@
 ---
-title: 'Archive'
-date: '2018-10-09'
-type: 'page'
-order: 3
+layout: page
+title: Archive
 ---
 
 #2018
