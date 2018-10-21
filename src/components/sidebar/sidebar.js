@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'graphql'
 import { Link } from 'gatsby'
 
 const Sidebar = () => (
@@ -10,7 +11,9 @@ const Sidebar = () => (
             <span role="img" aria-label="emoji">
               👨🏻‍💻{' '}
             </span>
-            {`</Diógenes Dauster>`}
+            <span>{`</`}</span>
+            {`Diógenes Dauster>`}
+            <span>{`>`}</span>
           </a>
         </h1>
         <p className="lead">Code Has No Accent</p>
