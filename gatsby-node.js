@@ -8,16 +8,38 @@
 
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const BLOG_POST_FILENAME_REGEX = /([0-9]+)-([0-9]+)-([0-9]+)-(.+)\.md$/
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` })
-    createNodeField({
-      node,
-      name: `slug`,
-      value: slug,
-    })
+    let slug = createFilePath({ node, getNode, basePath: `pages` })
+    if (node.frontmatter.layout && node.frontmatter.layout !== 'sidebar') {
+      if (node.frontmatter.layout === 'post') {
+        const { relativePath } = getNode(node.parent)
+        const match = BLOG_POST_FILENAME_REGEX.exec(relativePath)
+        const year = match[1]
+        const month = match[2]
+        const day = match[3]
+        const filename = match[4]
+        slug = `/${year}/${month}/${day}/${filename}`
+      }
+
+      createNodeField({
+        node,
+        name: `slug`,
+        value:
+          node.frontmatter.layout === 'page'
+            ? `/${node.frontmatter.sidebar.toLowerCase()}/`
+            : slug,
+      })
+
+      createNodeField({
+        node,
+        name: `layout`,
+        value: node.frontmatter.layout,
+      })
+    }
   }
 }
 
@@ -26,11 +48,14 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     graphql(`
       {
-        allMarkdownRemark {
+        allMarkdownRemark(
+          filter: { frontmatter: { layout: { ne: "sidebar" } } }
+        ) {
           edges {
             node {
               fields {
                 slug
+                layout
               }
             }
           }
@@ -38,10 +63,12 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then(result => {
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-        console.log(node)
         createPage({
           path: node.fields.slug,
-          component: path.resolve(`./src/templates/PageTemplate.js`),
+          component:
+            node.fields.layout === 'page'
+              ? path.resolve(`./src/templates/PageTemplate.js`)
+              : path.resolve(`./src/templates/PostTemplate.js`),
           context: {
             // Data passed to context is available
             // in page queries as GraphQL variables.

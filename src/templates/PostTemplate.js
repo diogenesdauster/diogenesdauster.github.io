@@ -2,9 +2,15 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
 import Post from '../components/post/post'
+import NotFoundPage from '../pages/404'
 
-const PageTemplate = ({ data }) => {
+const PostTemplate = ({ data }) => {
   const post = data.markdownRemark
+
+  if (!post) {
+    return <NotFoundPage />
+  }
+
   return (
     <Layout>
       <Post title={post.frontmatter.title}>
@@ -25,4 +31,4 @@ export const query = graphql`
   }
 `
 
-export default PageTemplate
+export default PostTemplate
