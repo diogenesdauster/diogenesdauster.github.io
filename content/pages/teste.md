@@ -1,9 +1,9 @@
 ---
 layout: page
-sidebar: Archive
+sidebar: Teste
 ---
 
-#2018
+#2017
 
 - 10 de Outubro 2018 — [What is Lorem Ipsum?]()
 
