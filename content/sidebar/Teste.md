@@ -1,0 +1,4 @@
+---
+layout: sidebar
+name: Teste
+---

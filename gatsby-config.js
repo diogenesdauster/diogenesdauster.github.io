@@ -17,6 +17,13 @@ module.exports = {
         path: `${__dirname}/content/posts`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `sidebar`,
+        path: `${__dirname}/content/sidebar`,
+      },
+    },
     `gatsby-transformer-remark`,
     'gatsby-plugin-react-helmet',
     {
