@@ -11,21 +11,23 @@ const Post = ({ title, url, date, related_posts, children }) => {
         {children}
       </div>
 
-      <div className="related">
-        <h2>Related Posts</h2>
-        <ul className="related-posts">
-          {related_posts.map((post, index) => (
-            <li id={index}>
-              <h3>
-                <Link to={post.url}>
-                  {post.title} {'  '}
-                  <small>{post.date}</small>
-                </Link>
-              </h3>
-            </li>
-          ))}
-        </ul>
-      </div>
+      {related_posts ? (
+        <div className="related">
+          <h2>Related Posts</h2>
+          <ul className="related-posts">
+            {related_posts.map((post, index) => (
+              <li id={index}>
+                <h3>
+                  <Link to={post.url}>
+                    {post.title} {'  '}
+                    <small>{post.date}</small>
+                  </Link>
+                </h3>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
     </>
   )
 }
