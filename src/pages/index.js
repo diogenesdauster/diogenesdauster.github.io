@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => {
             key={idx}
             url={post.node.fields.slug}
             title={post.node.frontmatter.title}
-            date={new Date().toUTCString()}
+            date={post.node.frontmatter.postdate}
           >
             <p>{post.node.excerpt}</p>
           </Post>
@@ -45,6 +45,7 @@ export const query = graphql`
           }
           frontmatter {
             title
+            postdate: date(formatString: "MMMM Do, YYYY")
           }
         }
       }
