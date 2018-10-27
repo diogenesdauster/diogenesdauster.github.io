@@ -55,7 +55,7 @@ const Sidebar = () => (
                   })
                 : null}
             </nav>
-            <p>&copy; 2018. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()}. All rights reserved.</p>
           </div>
         </div>
       )
