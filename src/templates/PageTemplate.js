@@ -8,21 +8,21 @@ const PageTemplate = ({ data }) => {
   const pages = data.allMarkdownRemark.edges
   const title = data.allMarkdownRemark.edges[0].node.frontmatter.sidebar
 
-  if (!pages || !title) {
-    return <NotFoundPage />
-  }
-
   return (
     <Layout>
       <Page title={title}>
-        {pages.map((page, idx) => {
-          return (
-            <div
-              key={idx}
-              dangerouslySetInnerHTML={{ __html: page.node.html }}
-            />
-          )
-        })}
+        {pages || title ? (
+          pages.map((page, idx) => {
+            return (
+              <div
+                key={idx}
+                dangerouslySetInnerHTML={{ __html: page.node.html }}
+              />
+            )
+          })
+        ) : (
+          <NotFoundPage />
+        )}
       </Page>
     </Layout>
   )

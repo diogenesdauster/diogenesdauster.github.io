@@ -6,29 +6,23 @@ import Post from '../components/post/post'
 const IndexPage = ({ data }) => {
   let posts = data.allMarkdownRemark.edges
 
-  if (!posts) {
-    return (
-      <Layout>
-        <div className="posts">
-          <h1>No Posts</h1>
-        </div>
-      </Layout>
-    )
-  }
-
   return (
     <Layout>
       <div className="posts">
-        {posts.map((post, idx) => (
-          <Post
-            key={idx}
-            url={post.node.fields.slug}
-            title={post.node.frontmatter.title}
-            date={new Date().toUTCString()}
-          >
-            <p>{post.node.excerpt}</p>
-          </Post>
-        ))}
+        {posts ? (
+          posts.map((post, idx) => (
+            <Post
+              key={idx}
+              url={post.node.fields.slug}
+              title={post.node.frontmatter.title}
+              date={post.node.frontmatter.postdate}
+            >
+              <p>{post.node.excerpt}</p>
+            </Post>
+          ))
+        ) : (
+          <h1>No Posts</h1>
+        )}
       </div>
     </Layout>
   )
@@ -45,6 +39,7 @@ export const query = graphql`
           }
           frontmatter {
             title
+            postdate: date(formatString: "MMMM Do, YYYY")
           }
         }
       }
