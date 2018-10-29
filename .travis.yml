@@ -11,7 +11,7 @@ sudo: false
 
 branches:
   only:
-    - master
+    - develop
 
 deploy:
   provider: pages
