@@ -6,17 +6,33 @@ cache:
   yarn: true
 
 dist: trusty
-
 sudo: false
 
 branches:
   only:
     - develop
+    - travis-configs
+
+notifications:
+  email:
+    recipents:
+      - diogenes.dauster@gmail.com
+      on_success: always
+      on_failure: always
+
+git:
+  depth: 3
+
+script:
+  - yarn build
 
 deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN # Set in the settings page of your repository, as a secure variable
   keep-history: true
+  local_dir: public
+  target_branch: master
   on:
-    branch: master
+    branch: travis-configs
+  repo: diogenesdauster/diogenesdauster.github.io
