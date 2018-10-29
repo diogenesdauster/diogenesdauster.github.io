@@ -17,8 +17,8 @@ notifications:
   email:
     recipents:
       - diogenes.dauster@gmail.com
-      on_success: always
-      on_failure: always
+    on_success: always
+    on_failure: always
 
 git:
   depth: 3
