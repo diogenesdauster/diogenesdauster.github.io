@@ -1,4 +1,0 @@
----
-layout: sidebar
-name: Projects
----
