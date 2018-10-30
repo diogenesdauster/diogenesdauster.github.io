@@ -11,7 +11,6 @@ sudo: false
 branches:
   only:
     - develop
-    - travis-configs
 
 notifications:
   email:
@@ -34,5 +33,5 @@ deploy:
   local_dir: public
   target_branch: master
   on:
-    branch: travis-configs
+    branch: develop
   repo: diogenesdauster/diogenesdauster.github.io
