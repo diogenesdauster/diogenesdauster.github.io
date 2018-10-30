@@ -1,7 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Sidebar renders correctly 1`] = `
-<div>
-  Loading (StaticQuery)
+<div
+  className="sidebar"
+>
+  <div
+    className="container sidebar-sticky"
+  >
+    <div
+      className="sidebar-about"
+    >
+      <h1>
+        <a
+          href="/"
+        >
+          <span
+            aria-label="emoji"
+            role="img"
+          >
+            👨🏻‍💻
+             
+          </span>
+          <span>
+            &lt;/
+          </span>
+          Diógenes Dauster
+          <span>
+            &gt;
+          </span>
+        </a>
+      </h1>
+      <p
+        className="lead"
+      >
+        Code Has No Accent
+      </p>
+    </div>
+    <nav
+      className="sidebar-nav"
+    >
+      <Link
+        className="sidebar-nav-item"
+        to="/"
+      >
+        Home
+      </Link>
+      <Link
+        className="sidebar-nav-item"
+        to="about"
+      >
+        About
+      </Link>
+      <Link
+        className="sidebar-nav-item"
+        to="archive"
+      >
+        Archive
+      </Link>
+      <Link
+        className="sidebar-nav-item"
+        to="projects"
+      >
+        Projects
+      </Link>
+    </nav>
+    <p>
+      © 
+      2018
+      . All rights reserved.
+    </p>
+  </div>
 </div>
 `;
