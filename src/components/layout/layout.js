@@ -1,26 +1,31 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import Sidebar from '../sidebar/sidebar'
+import { Sidebar, PureSidebar } from '../sidebar/sidebar'
 import './layout.css'
 import './syntax.css'
 
-const Layout = ({ children, title }) => (
-  <>
-    <Helmet
-      title={title}
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    >
-      <html lang="en" />
-    </Helmet>
+export const PureLayout = ({ children, title, data }) => {
+  return (
+    <>
+      <Helmet
+        title={title}
+        meta={[
+          { name: 'description', content: 'Diogenes WebSite' },
+          { name: 'keywords', content: 'blog, developer, Diogenes Dauster' },
+        ]}
+      >
+        <html lang="en" />
+      </Helmet>
 
-    <Sidebar />
-    <div className="content container">{children}</div>
-  </>
-)
+      {data ? <PureSidebar data={data} /> : <Sidebar />}
+
+      <div className="content container">{children}</div>
+    </>
+  )
+}
+
+export const Layout = props => <PureLayout {...props} />
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
