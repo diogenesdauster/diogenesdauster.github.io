@@ -4,33 +4,6 @@ import { PureSidebar as Sidebar } from './sidebar'
 
 describe('Sidebar', () =>
   it('renders correctly', () => {
-    const data = {
-      allMarkdownRemark: {
-        edges: [
-          {
-            node: {
-              frontmatter: {
-                name: 'About',
-              },
-            },
-          },
-          {
-            node: {
-              frontmatter: {
-                name: 'Archive',
-              },
-            },
-          },
-          {
-            node: {
-              frontmatter: {
-                name: 'Projects',
-              },
-            },
-          },
-        ],
-      },
-    }
-    const tree = renderer.create(<Sidebar data={data} />).toJSON()
+    const tree = renderer.create(<Sidebar data={sideData} />).toJSON()
     expect(tree).toMatchSnapshot()
   }))

@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Archive renders correctly 1`] = `
+Array [
+  <div
+    className="sidebar"
+  >
+    <div
+      className="container sidebar-sticky"
+    >
+      <div
+        className="sidebar-about"
+      >
+        <h1>
+          <a
+            href="/"
+          >
+            <span
+              aria-label="emoji"
+              role="img"
+            >
+              👨🏻‍💻
+               
+            </span>
+            <span>
+              &lt;/
+            </span>
+            Diógenes Dauster
+            <span>
+              &gt;
+            </span>
+          </a>
+        </h1>
+        <p
+          className="lead"
+        >
+          Code Has No Accent
+        </p>
+      </div>
+      <nav
+        className="sidebar-nav"
+      >
+        <Link
+          className="sidebar-nav-item"
+          to="/"
+        >
+          Home
+        </Link>
+        <Link
+          className="sidebar-nav-item"
+          to="about"
+        >
+          About
+        </Link>
+        <Link
+          className="sidebar-nav-item"
+          to="archive"
+        >
+          Archive
+        </Link>
+        <Link
+          className="sidebar-nav-item"
+          to="projects"
+        >
+          Projects
+        </Link>
+      </nav>
+      <p>
+        © 
+        2018
+        . All rights reserved.
+      </p>
+    </div>
+  </div>,
+  <div
+    className="content container"
+  >
+    <div
+      className="page"
+    >
+      <h1
+        className="page-title"
+      >
+        Archives
+      </h1>
+      <h1>
+        2013
+      </h1>
+      <ul>
+        <li>
+          <p>
+            December 28th, 2013
+             —
+             
+            <Link
+              to="/2013/12/28/introducing-hyde"
+            >
+              Introducing Hyde
+            </Link>
+          </p>
+        </li>
+      </ul>
+      <h1>
+        2012
+      </h1>
+      <ul>
+        <li>
+          <p>
+            February 7th, 2012
+             —
+             
+            <Link
+              to="/2012/02/07/example-content"
+            >
+              Example content
+            </Link>
+          </p>
+        </li>
+        <li>
+          <p>
+            February 6th, 2012
+             —
+             
+            <Link
+              to="/2012/02/06/whats-jekyll"
+            >
+              What's Jekyll?
+            </Link>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>,
+]
+`;
