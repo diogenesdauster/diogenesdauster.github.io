@@ -2,6 +2,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import Archive from './archive.js'
 
+/* eslint-disable */
 describe('Archive', () =>
   it('renders correctly', () => {
     const data = {
@@ -52,3 +53,4 @@ describe('Archive', () =>
       .toJSON()
     expect(tree).toMatchSnapshot()
   }))
+/* eslint-disable */
