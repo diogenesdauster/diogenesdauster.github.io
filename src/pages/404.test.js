@@ -1,11 +1,11 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { PureSidebar as Sidebar } from './sidebar'
+import NotFoundPage from './404.js'
 
 /* eslint-disable */
-describe('Sidebar', () =>
+describe('404', () =>
   it('renders correctly', () => {
-    const tree = renderer.create(<Sidebar data={sideData} />).toJSON()
+    const tree = renderer.create(<NotFoundPage data={sideData} />).toJSON()
     expect(tree).toMatchSnapshot()
   }))
 /* eslint-disable */

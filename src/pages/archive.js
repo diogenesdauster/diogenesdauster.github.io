@@ -3,11 +3,11 @@ import Layout from '../components/layout/layout'
 import Page from '../components/page/page'
 import { Link, graphql } from 'gatsby'
 
-const Archive = ({ data }) => {
+const Archive = ({ data, layoutData }) => {
   const posts = createPosts(data.allMarkdownRemark.edges)
 
   return (
-    <Layout>
+    <Layout data={layoutData}>
       <Page title={'Archives'}>
         {posts
           ? Object.keys(posts)
