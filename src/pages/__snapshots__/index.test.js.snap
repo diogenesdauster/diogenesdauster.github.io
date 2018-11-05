@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IndexPage renders correctly 1`] = `
+Array [
+  <div
+    className="sidebar"
+  >
+    <div
+      className="container sidebar-sticky"
+    >
+      <div
+        className="sidebar-about"
+      >
+        <h1>
+          <a
+            href="/"
+          >
+            <span
+              aria-label="emoji"
+              role="img"
+            >
+              👨🏻‍💻
+               
+            </span>
+            <span>
+              &lt;/
+            </span>
+            Diógenes Dauster
+            <span>
+              &gt;
+            </span>
+          </a>
+        </h1>
+        <p
+          className="lead"
+        >
+          Code Has No Accent
+        </p>
+      </div>
+      <nav
+        className="sidebar-nav"
+      >
+        <Link
+          className="sidebar-nav-item"
+          to="/"
+        >
+          Home
+        </Link>
+        <Link
+          className="sidebar-nav-item"
+          to="about"
+        >
+          About
+        </Link>
+        <Link
+          className="sidebar-nav-item"
+          to="archive"
+        >
+          Archive
+        </Link>
+        <Link
+          className="sidebar-nav-item"
+          to="projects"
+        >
+          Projects
+        </Link>
+      </nav>
+      <p>
+        © 
+        2018
+        . All rights reserved.
+      </p>
+    </div>
+  </div>,
+  <div
+    className="content container"
+  >
+    <div
+      className="posts"
+    >
+      <div
+        className="post"
+      >
+        <h1
+          className="post-title"
+        >
+          <Link
+            to="/2013/12/28/introducing-hyde"
+          >
+            Introducing Hyde
+          </Link>
+        </h1>
+        <span
+          className="post-date"
+        >
+          December 28th, 2013
+        </span>
+        <p>
+          Hyde is a brazen two-column  Jekyll  theme that pairs a prominent sidebar with uncomplicated content. It's based on  Poole , the Jekyll…
+        </p>
+      </div>
+      <div
+        className="post"
+      >
+        <h1
+          className="post-title"
+        >
+          <Link
+            to="/2012/02/06/whats-jekyll"
+          >
+            What's Jekyll?
+          </Link>
+        </h1>
+        <span
+          className="post-date"
+        >
+          February 6th, 2012
+        </span>
+        <p>
+          Jekyll  is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From  the project…
+        </p>
+      </div>
+      <div
+        className="post"
+      >
+        <h1
+          className="post-title"
+        >
+          <Link
+            to="/2012/02/07/example-content"
+          >
+            Example content
+          </Link>
+        </h1>
+        <span
+          className="post-date"
+        >
+          February 7th, 2012
+        </span>
+        <p>
+          Cum sociis natoque penatibus et magnis  dis parturient montes , nascetur ridiculus mus.  Aenean eu leo quam.  Pellentesque ornare sem…
+        </p>
+      </div>
+    </div>
+  </div>,
+]
+`;

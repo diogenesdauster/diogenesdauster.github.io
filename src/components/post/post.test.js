@@ -1,12 +1,16 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Archive from './archive'
+import Post from './post'
 
 /* eslint-disable */
-describe('Archive', () =>
+describe('Post', () =>
   it('renders correctly', () => {
     const tree = renderer
-      .create(<Archive data={archiveData} layoutData={sideData} />)
+      .create(
+        <Post title={postTemplateData.markdownRemark.frontmatter.title}>
+          {postTemplateData.markdownRemark.html}
+        </Post>
+      )
       .toJSON()
     expect(tree).toMatchSnapshot()
   }))

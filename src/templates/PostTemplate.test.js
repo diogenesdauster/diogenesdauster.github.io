@@ -1,12 +1,12 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Archive from './archive'
+import PostTemplate from './PostTemplate'
 
 /* eslint-disable */
-describe('Archive', () =>
+describe('PostTemplate', () =>
   it('renders correctly', () => {
     const tree = renderer
-      .create(<Archive data={archiveData} layoutData={sideData} />)
+      .create(<PostTemplate data={postTemplateData} layoutData={sideData} />)
       .toJSON()
     expect(tree).toMatchSnapshot()
   }))
