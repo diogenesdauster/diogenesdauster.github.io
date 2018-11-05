@@ -1,12 +1,12 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Archive from './archive'
+import PageTemplate from './PageTemplate'
 
 /* eslint-disable */
-describe('Archive', () =>
+describe('PageTemplate', () =>
   it('renders correctly', () => {
     const tree = renderer
-      .create(<Archive data={archiveData} layoutData={sideData} />)
+      .create(<PageTemplate data={pageTemplateData} layoutData={sideData} />)
       .toJSON()
     expect(tree).toMatchSnapshot()
   }))

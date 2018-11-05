@@ -4,11 +4,11 @@ import Layout from '../components/layout/layout'
 import Post from '../components/post/post'
 import NotFoundPage from '../pages/404'
 
-const PostTemplate = ({ data }) => {
+const PostTemplate = ({ data, layoutData }) => {
   const post = data.markdownRemark
 
   return (
-    <Layout>
+    <Layout data={layoutData}>
       {post ? (
         <Post title={post.frontmatter.title}>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />

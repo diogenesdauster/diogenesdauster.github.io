@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageTemplate renders correctly 1`] = `
+Array [
+  <div
+    className="sidebar"
+  >
+    <div
+      className="container sidebar-sticky"
+    >
+      <div
+        className="sidebar-about"
+      >
+        <h1>
+          <a
+            href="/"
+          >
+            <span
+              aria-label="emoji"
+              role="img"
+            >
+              👨🏻‍💻
+               
+            </span>
+            <span>
+              &lt;/
+            </span>
+            Diógenes Dauster
+            <span>
+              &gt;
+            </span>
+          </a>
+        </h1>
+        <p
+          className="lead"
+        >
+          Code Has No Accent
+        </p>
+      </div>
+      <nav
+        className="sidebar-nav"
+      >
+        <Link
+          className="sidebar-nav-item"
+          to="/"
+        >
+          Home
+        </Link>
+        <Link
+          className="sidebar-nav-item"
+          to="about"
+        >
+          About
+        </Link>
+        <Link
+          className="sidebar-nav-item"
+          to="archive"
+        >
+          Archive
+        </Link>
+        <Link
+          className="sidebar-nav-item"
+          to="projects"
+        >
+          Projects
+        </Link>
+      </nav>
+      <p>
+        © 
+        2018
+        . All rights reserved.
+      </p>
+    </div>
+  </div>,
+  <div
+    className="content container"
+  >
+    <div
+      className="page"
+    >
+      <h1
+        className="page-title"
+      >
+        About
+      </h1>
+      <div
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Software Developer very fascinated about software architecture. I'm a person who likes hardworking for solving issues and always is learn something new. I have knowledge about FullStack Development, Mobile Development and Totvs ERP. Recently a took a Mobile Post-Graduation and a nanodegree in the Udacity to deep my knowledge. I started my developer career when I was a teenager and since then I've been learning how can I be a better developer. Making simple code for the others, taking care about what I write to avoid issue and doing test as many as possible.</p>
+<h1>Contact</h1>
+<ul>
+<li><a href=\\"mailto:diogenes.dauster@gmail.com\\">diogenes.dauster@gmail.com</a></li>
+<li><a href=\\"https://github.com/diogenesdauster\\">github.com/diogenesdauster</a></li>
+<li><a href=\\"https://www.linkedin.com/in/diogenesdauster/\\">linkedin.com/in/diogenesdauster</a></li>
+</ul>",
+          }
+        }
+      />
+    </div>
+  </div>,
+]
+`;

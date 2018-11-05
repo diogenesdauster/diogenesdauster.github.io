@@ -4,12 +4,12 @@ import Layout from '../components/layout/layout'
 import Page from '../components/page/page'
 import NotFoundPage from '../pages/404'
 
-const PageTemplate = ({ data }) => {
+const PageTemplate = ({ data, layoutData }) => {
   const pages = data.allMarkdownRemark.edges
   const title = data.allMarkdownRemark.edges[0].node.frontmatter.sidebar
 
   return (
-    <Layout>
+    <Layout data={layoutData}>
       <Page title={title}>
         {pages || title ? (
           pages.map((page, idx) => {
