@@ -22,50 +22,77 @@ Array [
               👨🏻‍💻
                
             </span>
-            <span>
+            <span
+              className="tags"
+            >
               &lt;/
             </span>
-            Diógenes Dauster
-            <span>
+            D.Dauster
+            <span
+              className="tags"
+            >
               &gt;
             </span>
           </a>
         </h1>
         <p
-          className="lead"
+          className="tagline"
         >
           Code Has No Accent
         </p>
       </div>
-      <nav
-        className="sidebar-nav"
+      <input
+        id="menu-icon"
+        type="checkbox"
+      />
+      <label
+        className="menu-label"
+        htmlFor="menu-icon"
+      />
+      <div
+        className="trigger"
       >
-        <Link
-          className="sidebar-nav-item"
-          to="/"
+        <ul
+          className="sidebar-nav"
         >
-          Home
-        </Link>
-        <Link
-          className="sidebar-nav-item"
-          to="about"
-        >
-          About
-        </Link>
-        <Link
-          className="sidebar-nav-item"
-          to="archive"
-        >
-          Archive
-        </Link>
-        <Link
-          className="sidebar-nav-item"
-          to="projects"
-        >
-          Projects
-        </Link>
-      </nav>
-      <p>
+          <li>
+            <Link
+              className="sidebar-nav-item"
+              to="/"
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="sidebar-nav-item"
+              to="about"
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="sidebar-nav-item"
+              to="archive"
+            >
+              Archive
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="sidebar-nav-item"
+              to="projects"
+            >
+              Projects
+            </Link>
+          </li>
+        </ul>
+      </div>
+      <p
+        className="copyright"
+      >
+         
         © 
         2018
         . All rights reserved.
