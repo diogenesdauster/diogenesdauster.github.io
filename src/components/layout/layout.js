@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { Sidebar, PureSidebar } from '../sidebar/sidebar'
-import './layout.css'
+import './poole.css'
+import './hyde.css'
 import './syntax.css'
 
 export const PureLayout = ({ children, title, data }) => {
