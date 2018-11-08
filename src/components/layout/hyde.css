@@ -111,6 +111,44 @@ a.sidebar-nav-item:focus {
   }
 }
 
+/* Sidebar Trigger */
+
+#menu-icon {
+  display: none;
+}
+
+.trigger {
+  display: none;
+  padding-top: 0.5rem;
+}
+
+input[type='checkbox']:checked ~ .trigger {
+  display: block;
+}
+
+.menu-label {
+  font-family: 'Source Code Pro', Menlo, Monaco, 'Courier New', monospace;
+}
+
+input[type='checkbox'] ~ .menu-label:after {
+  content: '[+]';
+}
+
+input[type='checkbox']:checked ~ .menu-label:after {
+  content: '[-]';
+}
+
+@media (min-width: 48em) {
+  .menu-label {
+    display: none;
+  }
+
+  .trigger {
+    display: block;
+    padding-top: inherit;
+  }
+}
+
 /* Container
  *
  * Align the contents of the site above the proper threshold with some margin-fu

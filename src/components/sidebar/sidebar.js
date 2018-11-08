@@ -13,31 +13,41 @@ export const PureSidebar = ({ data }) => {
               <span role="img" aria-label="emoji">
                 👨🏻‍💻{' '}
               </span>
-              <span>{`</`}</span>
-              {`Diógenes Dauster`}
-              <span>{`>`}</span>
+              <span className="tags">{`</`}</span>
+              {`D.Dauster`}
+              <span className="tags">{`>`}</span>
             </a>
           </h1>
-          <p className="lead">Code Has No Accent</p>
+          <p className="tagline">Code Has No Accent</p>
         </div>
-
-        <nav className="sidebar-nav">
-          <Link to="/" className="sidebar-nav-item">
-            Home
-          </Link>
-          {menus
-            ? menus.map(menu => {
-                const { name } = menu.node.frontmatter
-                const url = `${name.toLowerCase()}`
-                return (
-                  <Link to={url} key={name} className="sidebar-nav-item">
-                    {name}
-                  </Link>
-                )
-              })
-            : null}
-        </nav>
-        <p>&copy; {new Date().getFullYear()}. All rights reserved.</p>
+        <input type="checkbox" id="menu-icon" />
+        <label className="menu-label" htmlFor="menu-icon" />
+        <div className="trigger">
+          <ul className="sidebar-nav">
+            <li>
+              <Link to="/" className="sidebar-nav-item">
+                Home
+              </Link>
+            </li>
+            {menus
+              ? menus.map(menu => {
+                  const { name } = menu.node.frontmatter
+                  const url = `${name.toLowerCase()}`
+                  return (
+                    <li key={name}>
+                      <Link to={url} className="sidebar-nav-item">
+                        {name}
+                      </Link>
+                    </li>
+                  )
+                })
+              : null}
+          </ul>
+        </div>
+        <p className="copyright">
+          {' '}
+          &copy; {new Date().getFullYear()}. All rights reserved.
+        </p>
       </div>
     </div>
   )
