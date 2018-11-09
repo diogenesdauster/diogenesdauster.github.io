@@ -4,8 +4,6 @@ title: Introducing Gatsby Starter Hyde
 date: 2018-11-09
 ---
 
-#Introducing Gatsby Starter Hyde
-
 Hyde is a brazen two-column [Gatsby](https://www.gatsbyjs.org/) starter that pairs a prominent sidebar with uncomplicated content. It was originally made in [Jekyll](https://github.com/poole/hyde) by [@mdo](https://twitter.com/mdo).
 
 ### Built on Gastby-cli
