@@ -6,20 +6,24 @@ import './poole.css'
 import './hyde.css'
 import './syntax.css'
 
-export const PureLayout = ({ children, title, data }) => {
+export const PureLayout = ({ children, title, data, url }) => {
   return (
     <>
       <Helmet
         title={title}
         meta={[
           { name: 'description', content: 'Diogenes WebSite' },
-          { name: 'keywords', content: 'blog, developer, Diogenes Dauster' },
+          { name: 'keywords', content: 'blog, developer, Diógenes Dauster' },
         ]}
       >
         <html lang="en" />
       </Helmet>
 
-      {data ? <PureSidebar data={data} /> : <Sidebar />}
+      {data ? (
+        <PureSidebar data={data} activeUri={url} />
+      ) : (
+        <Sidebar activeUri={url} />
+      )}
 
       <div className="content container">{children}</div>
     </>

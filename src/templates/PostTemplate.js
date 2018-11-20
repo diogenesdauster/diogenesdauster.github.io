@@ -8,7 +8,7 @@ const PostTemplate = ({ data, layoutData }) => {
   const post = data.markdownRemark
 
   return (
-    <Layout data={layoutData}>
+    <Layout data={layoutData} url={'/post'}>
       {post ? (
         <Post title={post.frontmatter.title}>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />

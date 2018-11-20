@@ -3,11 +3,13 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
 import Post from '../components/post/post'
 
-const IndexPage = ({ data, layoutData }) => {
+const IndexPage = props => {
+  console.log(props)
+  const { data, layoutData, key } = props
   let posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout data={layoutData}>
+    <Layout data={layoutData} url={key}>
       <div className="posts">
         {posts ? (
           posts.map((post, idx) => (
