@@ -5,12 +5,16 @@ import Page from '../components/page/page'
 import NotFoundPage from '../pages/404'
 
 const PageTemplate = props => {
-  const { data, layoutData, key } = props
+  const {
+    data,
+    layoutData,
+    pageContext: { slug },
+  } = props
   const pages = data.allMarkdownRemark.edges
   const title = data.allMarkdownRemark.edges[0].node.frontmatter.sidebar
-
+  console.log(slug.replace('///', ''))
   return (
-    <Layout data={layoutData} url={key}>
+    <Layout data={layoutData} url={slug.replace('/', '')}>
       <Page title={title}>
         {pages || title ? (
           pages.map((page, idx) => {

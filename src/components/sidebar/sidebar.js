@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { Link } from 'gatsby'
 
-export const PureSidebar = ({ data, activeUri = '/' }) => {
+export const PureSidebar = ({ data, activeUri }) => {
   const menus = data.allMarkdownRemark.edges
   return (
     <div className="sidebar">
@@ -40,6 +40,8 @@ export const PureSidebar = ({ data, activeUri = '/' }) => {
               ? menus.map(menu => {
                   const { name } = menu.node.frontmatter
                   const url = `${name.toLowerCase()}`
+                  console.log('activeUri: ' + activeUri)
+                  console.log('url :' + url)
                   return (
                     <li key={name}>
                       <Link

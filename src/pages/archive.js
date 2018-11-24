@@ -7,7 +7,7 @@ const Archive = ({ data, layoutData }) => {
   const posts = createPosts(data.allMarkdownRemark.edges)
 
   return (
-    <Layout data={layoutData}>
+    <Layout data={layoutData} url="archive">
       <Page title={'Archives'}>
         {posts
           ? Object.keys(posts)

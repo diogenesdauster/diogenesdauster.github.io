@@ -4,12 +4,11 @@ import Layout from '../components/layout/layout'
 import Post from '../components/post/post'
 
 const IndexPage = props => {
-  console.log(props)
-  const { data, layoutData, key } = props
+  const { data, layoutData } = props
   let posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout data={layoutData} url={key}>
+    <Layout data={layoutData} url="/">
       <div className="posts">
         {posts ? (
           posts.map((post, idx) => (
