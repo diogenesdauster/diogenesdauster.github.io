@@ -1,3 +1,9 @@
+---
+layout: post
+title: Privacy Policy Bull's Eye App
+date: 2019-03-10
+---
+
 #Privacy Policy
 
 
